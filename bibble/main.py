@@ -12,6 +12,10 @@ from pybtex.database.input import bibtex
 import jinja2
 import jinja2.sandbox
 
+# Fix issue with duplicate entities
+import pybtex
+pybtex.errors.set_strict_mode(False)
+
 
 MONTHS = {
     'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'may': 5, 'jun': 6,
